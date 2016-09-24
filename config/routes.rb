@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  get 'welcome/index'
+  resources :users do
+    resources :medications
+  end
 
   root 'welcome#index'
 end
