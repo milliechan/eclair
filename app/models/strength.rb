@@ -1,0 +1,2 @@
+class Strength < ApplicationRecord
+end
