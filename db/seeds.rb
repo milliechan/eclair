@@ -8,7 +8,16 @@
 
 
 User.create(
-  name: 'tom'
+  name: 'tom',
+  insurance_plan_number: "111111",
+  insurance_type: "Medicare Plan D",
+  insurance_name: "Aetna",
+  cost_per_month_before_gap: 500, 
+  cost_per_month_during_gap: 1000,
+  cost_per_month_after_gap: 100,
+  months_before_gap: 6,
+  months_during_gap: 2,
+  months_after_gap: 4
   )
 
 Medication.create(
