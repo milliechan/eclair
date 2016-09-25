@@ -6,12 +6,12 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @medications = @user.medications
     
-    # if request.xhr?
-      @new_list = []
+    
+    @new_list = []
+    if request.xhr?
       @medications.each_with_index do |drug, index| 
-        # p is_brand_name?(drug)
-        # if is_brand_name?(drug)
-        if index < 4
+       
+        if is_brand_name?(drug)
           data = get_generics(drug)
           parsed_data = JSON.parse(data)
           generic_drug = parsed_data["Items"][0]["GenericDrugDesc"]
@@ -19,9 +19,9 @@ class UsersController < ApplicationController
         else 
           @new_list << drug.name
         end 
-
       end
-    # end 
+    end 
+    
     render :show
   end
 

@@ -42,7 +42,7 @@ module MedicationsHelper
     end
   end
 
-  def is_brand_name?(original_drug)
+def is_brand_name?(original_drug)
 
     clientId = "1197"
     secret = "n1ndBzCNh+hW7kbVueswEsCGNiDd1yS6U4MKk3kOe14="
@@ -53,11 +53,9 @@ module MedicationsHelper
 
     # # address = address + "/DrugNames?callSystemName=Dr. Sprenkle EHR&callid=1234&deptName=Dental Surgery Center&searchText=#{original_drug.name}"
     # address = address + "/DrugNames?callSystemName=Dr. Sprenkle EHR&callid=1234&deptName=Dental Surgery Center&searchText=Namenda"
-    address = "https://api.fdbcloudconnector.com/CC/api/v1_3/DrugNames?callSystemName=Dr. Sprenkle EHR&callid=1234&deptName=Dental Surgery Center&searchText=carbocain"
+    address = "https://api.fdbcloudconnector.com/CC/api/v1_3/DrugNames?callsystemName=demo&searchText=#{original_drug.name}&responseFields=NameTypeCode"
 
     uri = URI.parse(address)
-    uri.query = [uri.query, "callsystemname=demo"].compact.join('?')
-    uri.query = [uri.query, "sections=T,H"].compact.join('&')
 
     #add the headers required for authorization,
     # and to return the response in JSON format
@@ -78,21 +76,14 @@ module MedicationsHelper
     #output the response
     if res.code == '200'
       data = res.body
-      # parsed_data = JSON.parse(data)
-      # type = parsed_data["Items"][0]["NameTypeCode"]
-      p "FROM HELPER DATA VARIABLE" * 15
-      p data
-      type = data["Items"][0]["NameTypeCode"]
+      parsed_data = JSON.parse(data)
+
+      type = parsed_data["Items"][0]["NameTypeCode"]
       if type == "1"
         return true
       else
         return false
       end
-
-      # if res.body.nametypecode == 1
-        #return true
-      # else return false
-
     else
       puts res.code
       puts res.message
