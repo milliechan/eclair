@@ -53,37 +53,23 @@ $(document).ready(function() {
       function getDatasetData() {
         return [2016, 2016, 2016, 2016, 2016, 2016, 2016, 2016, 2016, 2016, 2016, 2016];
       }
+
+      var colorArray = []
+      for (var i = 1; i < 13; i++) {
+        if (response.graph[i].in_dh == true){
+          colorArray.push("#FF8E8E")
+        }
+        else {
+          colorArray.push("#AFE086")
+        }
+      }
+      console.log(colorArray)
       function getBackgroundColor() {
-        return [
-            "#AFE086",
-            "#AFE086",
-            "#AFE086",
-            "#AFE086",
-            "#AFE086",
-            "#AFE086",
-            "#AFE086",
-            "#FF8E8E",
-            "#FF8E8E",
-            "#FF8E8E",
-            "#AFE086",
-            "#AFE086"
-        ];
+      console.log(colorArray)     
+        return colorArray;
       }
       function getHoverBackgroundColor() {
-        return [
-            "#C6F0A3",
-            "#C6F0A3",
-            "#C6F0A3",
-            "#C6F0A3",
-            "#C6F0A3",
-            "#C6F0A3",
-            "#C6F0A3",
-            "#FFC3BC",
-            "#FFC3BC",
-            "#FFC3BC",
-            "#C6F0A3",
-            "#C6F0A3"
-        ];
+        return colorArray;
       }
       function getOptions() {
         return {
