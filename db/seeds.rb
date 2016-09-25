@@ -21,7 +21,7 @@ drug_list = [
 
 
 User.create(
-  name: 'tom',
+  name: 'Vivian',
   insurance_plan_number: "111111",
   insurance_type: "Medicare Plan D",
   insurance_name: "Aetna",
