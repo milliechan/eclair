@@ -11,7 +11,7 @@ module MedicationsHelper
     # of the patient education monograph for Digoxin (DispensableGeneric Id = 11)
     address = "https://api.fdbcloudconnector.com/CC/api/v1_3"
 
-    address = address + "/GenericDrugs?callSystemName=Dr. Sprenkle EHR&searchText=#{original_drug}&callid=1234&deptName=Patient e-Rx"
+    address = address + "/GenericDrugs?callSystemName=Dr. Sprenkle EHR&searchText=#{original_drug.name}&callid=1234&deptName=Patient e-Rx"
     uri = URI.parse(address)
     uri.query = [uri.query, "callsystemname=demo"].compact.join('?')
     uri.query = [uri.query, "sections=T,H"].compact.join('&')
@@ -34,7 +34,7 @@ module MedicationsHelper
      
     #output the response
     if res.code == '200'
-      puts res.body
+      return res.body
     else
       puts res.code
       puts res.message
