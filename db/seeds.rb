@@ -6,26 +6,26 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-drug_list = [ "Namenda", 
-              "Zometa",
-              "Singulair",
-              "Vytorin",
-              "Lisinopril",
-              "Simvastatin",
-              "Metformin",
-              "alendronate",
-              "Tamsulosin" ,
-              "Levothyroxine",
-              "Sertraline",
-              "Hydrochlorothiazide",
-              "Metoprolol",
-              "Isosorbide mononitrate"
+drug_list = [ "namenda", 
+              # "zometa",
+              # "singulair",
+              # "vytorin",
+              # "lisinopril",
+              # "simvastatin",
+              # "metformin",
+              # "alendronate",
+              # "tamsulosin" ,
+              # "levothyroxine",
+              # "sertraline",
+              # "hydrochlorothiazide",
+              # "metoprolol",
+              # "isosorbide mononitrate"
             ]
 
 
 User.create(
   name: 'Vivian',
-  insurance_plan_number: "111111",
+  insurance_plan_number: 'S5820003',
   insurance_type: "Medicare Plan D",
   insurance_name: "Aetna",
   cost_per_month_before_gap: 500, 

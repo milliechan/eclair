@@ -19,18 +19,17 @@
     <div class="graph">
       <canvas id="costEstimateGraph" width="400" height="400"></canvas>
     </div>
-    <a href="#compareDrugs" class="btn">See Alternative Medications</a>
+    <a href="#compareDrugs" id="getGenericDrugsButton" class="btn">See Alternative Medications</a>
   </div>
 
   <div class="drug-comparisons" id="compareDrugs">
     <h3 class="title">Alternative Generic Medications:</h3>
     <ol class="custom-bullet alternate-pill-list">
-      <li><a href="medicine/id">Medicine 1</a></li>
-      <li><a href="medicine/id">Medicine 2</a></li>
-      <li><a href="medicine/id">Medicine 3</a></li>
-      <li><a href="medicine/id">Medicine 2</a></li>
+    <% @new_list.each do |medication| %>
+      <li><%= medication.downcase %></li>
+    <% end %>
     </ol>
-    <a href="#graphSection" class="btn">See Updated Chart</a>
+    <a href="#graphSection" id="updatedChartButton" class="btn">See Updated Chart</a>
   </div>
 
 </section>

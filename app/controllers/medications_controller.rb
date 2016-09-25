@@ -6,7 +6,7 @@ class MedicationsController < ApplicationController
   end
 
   def create 
-    @user = User.find(1)
+    @user = User.find(params[:user_id])
     @medication = Medication.create(name: params[:name])
     UserMedication.create(user_id: 1, medication_id: @medication.id)
     @medications = @user.medications
@@ -14,8 +14,8 @@ class MedicationsController < ApplicationController
   end
 
   def index
-    user = User.find(1)
-    @medications = user.medications
+    @user = User.find(params[:user_id])
+    @medications = @user.medications
     render :index
   end
 

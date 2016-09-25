@@ -2,14 +2,23 @@ require 'pokitdok'
 
 module UsersHelper
 
-	$pokitdok_call = [{"drug"=>"MEMANTINE HCL 10 MG TABLET", "tier"=>3, "tier_name"=>"preferred brand", "prior_auth"=>true, "limit_amount"=>"60", "step_therapy"=>false, "quantity_limit"=>true, "limit_days"=>30, "retail"=>{"oop_30_day"=>{"amount"=>"35.00", "currency"=>"USD"}, "total_cost_30_day"=>{"amount"=>"46.71", "currency"=>"USD"}, "ins_pay_30_day"=>{"amount"=>"11.71", "currency"=>"USD"}}, "mail"=>{"oop_90_day"=>{"amount"=>"90.00", "currency"=>"USD"}, "total_cost_90_day"=>{"amount"=>"135.39", "currency"=>"USD"}, "ins_pay_90_day"=>{"amount"=>"45.39", "currency"=>"USD"}}}, {"drug"=>"TAMSULOSIN HCL 0.4 MG CAPSULE", "tier"=>2, "tier_name"=>"generic", "prior_auth"=>false, "step_therapy"=>false, "quantity_limit"=>false, "retail"=>{"oop_30_day"=>{"amount"=>"8.00", "currency"=>"USD"}, "total_cost_30_day"=>{"amount"=>"12.44", "currency"=>"USD"}, "ins_pay_30_day"=>{"amount"=>"4.44", "currency"=>"USD"}}, "mail"=>{"oop_90_day"=>{"amount"=>"0.00", "currency"=>"USD"}, "total_cost_90_day"=>{"amount"=>"33.84", "currency"=>"USD"}, "ins_pay_90_day"=>{"amount"=>"33.84", "currency"=>"USD"}}}, {"drug"=>"METOPROLOL TARTRATE 50 MG TAB", "tier"=>1, "tier_name"=>"preferred generic", "prior_auth"=>false, "step_therapy"=>false, "quantity_limit"=>false, "retail"=>{"oop_30_day"=>{"amount"=>"4.00", "currency"=>"USD"}, "total_cost_30_day"=>{"amount"=>"6.85", "currency"=>"USD"}, "ins_pay_30_day"=>{"amount"=>"2.85", "currency"=>"USD"}}, "mail"=>{"oop_90_day"=>{"amount"=>"0.00", "currency"=>"USD"}, "total_cost_90_day"=>{"amount"=>"19.01", "currency"=>"USD"}, "ins_pay_90_day"=>{"amount"=>"19.01", "currency"=>"USD"}}}, {"drug"=>"LISINOPRIL 30 MG TABLET", "tier"=>1, "tier_name"=>"preferred generic", "prior_auth"=>false, "limit_amount"=>"60", "step_therapy"=>false, "quantity_limit"=>true, "limit_days"=>30, "retail"=>{"oop_30_day"=>{"amount"=>"4.00", "currency"=>"USD"}, "total_cost_30_day"=>{"amount"=>"5.91", "currency"=>"USD"}, "ins_pay_30_day"=>{"amount"=>"1.91", "currency"=>"USD"}}, "mail"=>{"oop_90_day"=>{"amount"=>"0.00", "currency"=>"USD"}, "total_cost_90_day"=>{"amount"=>"16.15", "currency"=>"USD"}, "ins_pay_90_day"=>{"amount"=>"16.15", "currency"=>"USD"}}}, {"drug"=>"METFORMIN HCL 1,000 MG TABLET", "tier"=>1, "tier_name"=>"preferred generic", "prior_auth"=>false, "limit_amount"=>"75", "step_therapy"=>false, "quantity_limit"=>true, "limit_days"=>30, "retail"=>{"oop_30_day"=>{"amount"=>"4.00", "currency"=>"USD"}, "total_cost_30_day"=>{"amount"=>"6.52", "currency"=>"USD"}, "ins_pay_30_day"=>{"amount"=>"2.52", "currency"=>"USD"}}, "mail"=>{"oop_90_day"=>{"amount"=>"0.00", "currency"=>"USD"}, "total_cost_90_day"=>{"amount"=>"18.04", "currency"=>"USD"}, "ins_pay_90_day"=>{"amount"=>"18.04", "currency"=>"USD"}}}, {"drug"=>"SIMVASTATIN 80 MG TABLET", "tier"=>1, "tier_name"=>"preferred generic", "prior_auth"=>false, "limit_amount"=>"30", "step_therapy"=>false, "quantity_limit"=>true, "limit_days"=>30, "retail"=>{"oop_30_day"=>{"amount"=>"4.00", "currency"=>"USD"}, "total_cost_30_day"=>{"amount"=>"6.68", "currency"=>"USD"}, "ins_pay_30_day"=>{"amount"=>"2.68", "currency"=>"USD"}}, "mail"=>{"oop_90_day"=>{"amount"=>"0.00", "currency"=>"USD"}, "total_cost_90_day"=>{"amount"=>"18.60", "currency"=>"USD"}, "ins_pay_90_day"=>{"amount"=>"18.60", "currency"=>"USD"}}}, {"drug"=>"TAMSULOSIN HCL 0.4 MG CAPSULE", "tier"=>2, "tier_name"=>"generic", "prior_auth"=>false, "step_therapy"=>false, "quantity_limit"=>false, "retail"=>{"oop_30_day"=>{"amount"=>"8.00", "currency"=>"USD"}, "total_cost_30_day"=>{"amount"=>"12.44", "currency"=>"USD"}, "ins_pay_30_day"=>{"amount"=>"4.44", "currency"=>"USD"}}, "mail"=>{"oop_90_day"=>{"amount"=>"0.00", "currency"=>"USD"}, "total_cost_90_day"=>{"amount"=>"33.84", "currency"=>"USD"}, "ins_pay_90_day"=>{"amount"=>"33.84", "currency"=>"USD"}}}, {"drug"=>"ALENDRONATE SODIUM 5 MG TABLET", "tier"=>1, "tier_name"=>"preferred generic", "prior_auth"=>false, "limit_amount"=>"30", "step_therapy"=>false, "quantity_limit"=>true, "limit_days"=>30, "retail"=>{"oop_30_day"=>{"amount"=>"4.00", "currency"=>"USD"}, "total_cost_30_day"=>{"amount"=>"7.50", "currency"=>"USD"}, "ins_pay_30_day"=>{"amount"=>"3.50", "currency"=>"USD"}}, "mail"=>{"oop_90_day"=>{"amount"=>"0.00", "currency"=>"USD"}, "total_cost_90_day"=>{"amount"=>"20.54", "currency"=>"USD"}, "ins_pay_90_day"=>{"amount"=>"20.54", "currency"=>"USD"}}}, {"drug"=>"LEVOTHYROXINE 100 MCG VIAL", "tier"=>5, "tier_name"=>"specialty tier", "prior_auth"=>false, "step_therapy"=>false, "quantity_limit"=>false, "retail"=>{"oop_30_day"=>{"amount"=>"24.67", "currency"=>"USD"}, "total_cost_30_day"=>{"amount"=>"74.76", "currency"=>"USD"}, "ins_pay_30_day"=>{"amount"=>"50.09", "currency"=>"USD"}}, "mail"=>{"oop_90_day"=>{"amount"=>"73.45", "currency"=>"USD"}, "total_cost_90_day"=>{"amount"=>"222.57", "currency"=>"USD"}, "ins_pay_90_day"=>{"amount"=>"149.12", "currency"=>"USD"}}}, {"drug"=>"SERTRALINE HCL 25 MG TABLET", "tier"=>1, "tier_name"=>"preferred generic", "prior_auth"=>false, "step_therapy"=>false, "quantity_limit"=>false, "retail"=>{"oop_30_day"=>{"amount"=>"4.00", "currency"=>"USD"}, "total_cost_30_day"=>{"amount"=>"6.20", "currency"=>"USD"}, "ins_pay_30_day"=>{"amount"=>"2.20", "currency"=>"USD"}}, "mail"=>{"oop_90_day"=>{"amount"=>"0.00", "currency"=>"USD"}, "total_cost_90_day"=>{"amount"=>"16.82", "currency"=>"USD"}, "ins_pay_90_day"=>{"amount"=>"16.82", "currency"=>"USD"}}}, {"drug"=>"HYDROCHLOROTHIAZIDE 12.5 MG TB", "tier"=>1, "tier_name"=>"preferred generic", "prior_auth"=>false, "step_therapy"=>false, "quantity_limit"=>false, "retail"=>{"oop_30_day"=>{"amount"=>"4.00", "currency"=>"USD"}, "total_cost_30_day"=>{"amount"=>"6.03", "currency"=>"USD"}, "ins_pay_30_day"=>{"amount"=>"2.03", "currency"=>"USD"}}, "mail"=>{"oop_90_day"=>{"amount"=>"0.00", "currency"=>"USD"}, "total_cost_90_day"=>{"amount"=>"16.37", "currency"=>"USD"}, "ins_pay_90_day"=>{"amount"=>"16.37", "currency"=>"USD"}}}]
-
+	$pokitdok_call = []
 	$total_cost = []
 	$pt_costs_monthy_no_dh = []
 	$pt_costs_monthy_during_dh = []
 	$costs_toward_dh = []
 	pt_costs_monthy_after_dh = []
 
+
+	#calling pokitdok api for each med in array
+	def pokitdok_api(user)
+		pd = PokitDok::PokitDok.new("RrslJ6itUf2akQHs1Zal", "NdHPmIQXiBGGTwRGYqh1qsKuDGVbgyQlqSzc4q5n")
+		user.medications.each do |medication|
+			test = pd.pharmacy_formulary(trading_partner_id: 'medicare_national', plan_number: user.insurance_plan_number, drug: medication.name.downcase)
+			$pokitdok_call << test['data'][0]
+		end
+		$pokitdok_call
+	end
 
 	#grand total drug(what patient pays and insurance so the total rx cost)
 	def get_grand_total_one_month
@@ -78,17 +87,22 @@ module UsersHelper
 			#Patient pays no more than 45% of ⇒ plan’s cost for covered brand-name prescription drugs + pharmacy’s dispensing fee
 			if drug['tier'] == 1
 				$costs_toward_dh << drug['retail']['total_cost_30_day']['amount'].to_f * 0.58
+				$costs_toward_dh.inject(:+).round(2)
 
 			#patient pays 58% of cost, 58% of cost goes toward geting out of donut hole			
 			elsif drug['tier'] == 2
 				$costs_toward_dh << drug['retail']['total_cost_30_day']['amount'].to_f * 0.45
+				$costs_toward_dh.inject(:+).round(2)
 
 			elsif drug['tier'] == 3
 				$costs_toward_dh << drug['retail']['total_cost_30_day']['amount'].to_f * 0.45
+				$costs_toward_dh.inject(:+).round(2)
+			else
+				$costs_toward_dh = 0
 			end
 		end
 
-		$costs_toward_dh.inject(:+).round(2)
+		$costs_toward_dh
 	end
 
 	def months_in_dh
@@ -126,7 +140,8 @@ module UsersHelper
 
 
 
-	def graph_output
+	def graph_output(user)
+		pokitdok_api(user)
 		output_hash = {}
 		if is_in_donut_hole_this_year?
 			months_not_in_dh.times do |i|

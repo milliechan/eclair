@@ -7,18 +7,13 @@ class UsersController < ApplicationController
     @medications = @user.medications
 
     # if request.xhr?
-      new_list = []
+      @new_list = []
       @medications.each do |drug| 
       # if drug.brand_name 
         data = get_generics(drug)
         parsed_data = JSON.parse(data)
         generic_drug = parsed_data["Items"][0]["GenericDrugDesc"]
-        new_list << generic_drug
-        p "*" * 1000
-        p new_list
-      # else 
-      #   new_list << drug 
-      # end 
+        @new_list << generic_drug
       end
     # end 
     
@@ -26,7 +21,9 @@ class UsersController < ApplicationController
   end
 
   def donut
-		render json: { graph: graph_output }, status: 200
+  	@user = User.find(params[:user_id])
+ 
+		render json: { graph: graph_output(@user) }, status: 200
 	end
 
 end

@@ -23,9 +23,9 @@ $(document).ready(function() {
 
   function initializeCostEstimateGraph() {
 
-        var address = window.location.href
+    var address = window.location.href
     var split_address = address.split('/');
-    var event_id = split_address[split_address.length - 2];
+    var event_id = split_address[split_address.length - 1];
 
     var request = $.ajax({
       url: "/users/"+event_id+"/donut",
