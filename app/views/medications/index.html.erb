@@ -24,26 +24,18 @@
       </div>
       <div id="enterMeds">
         <h3>Add a Medicine</h3>
-        
+
         <form id="medications" name="medications" action='medications' method="post">
-        Name of Medication: <input type="text" name="name">
-          <!--<label><span>Prescription Name: </span><input/></label>   -->       <input type="submit" value="Add">
+        Name of Medication: <input class="formField" type="text" name="name">
+          <!--<label><span>Prescription Name: </span><input/></label>   -->
+          <input class="formSubmit" type="submit" value="Add">
         </form>
 
       </div>
     </div>
 
-    <div id="enterMeds">
-      <h3>Add a Medicine</h3>
-      <form id="medications" name="medications">
-        <label><span>Prescription Name: </span><input/></label>
-        <input type="submit" value="Add">
-      </form>
-    </div>
-  </div>
-
   <div class='show_donut_button'>
     <%= link_to 'See estimate yearly cost', user_path(@user.id), class:"btn" %>
   </div>
-  
+
 </section>

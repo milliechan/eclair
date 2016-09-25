@@ -8,6 +8,7 @@ In 24 hours, develop an easy-to-use tool to help seniors better understand and e
 With Eclair, we created a proactive way for seniors to EASILY avoid their MEDICARE PART D coverage gap!
 
 
+
 ## Screenshots
 ![screenshots](/public/screenshots.jpg "screenshots")
 

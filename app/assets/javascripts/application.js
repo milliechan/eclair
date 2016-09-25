@@ -64,7 +64,7 @@ $(document).ready(function() {
       }
       console.log(colorArray)
       function getBackgroundColor() {
-      console.log(colorArray)     
+      console.log(colorArray)
         return colorArray;
       }
       function getHoverBackgroundColor() {
@@ -113,7 +113,7 @@ $(document).ready(function() {
 //  // build scene
  var scene = new ScrollMagic.Scene({triggerElement: ".features", duration: 200, offset: 0})
  				.addTo(controller)
-         .setPin("#graph")
+        .onLoad("#graph")
  				// .addIndicators() // add indicators (requires plugin)
  				.on("update", function (e) {
  					$("#scrollDirection").text(e.target.controller().info("scrollDirection"));
