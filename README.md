@@ -5,7 +5,7 @@
 ## Purpose
 In 24 hours, develop an easy-to-use tool to help seniors better understand and engage with their health care costs.
 
-With Eclair, we made the first ever way for seniors to EASILY avoid their MEDICARE PART D coverage gap!
+With Eclair, we made the first ever way for seniors to EASILY avoid their MEDICARE PART D coverage gap, a.k.a. the "doughnut hole"!
 
 
 ## Screenshots
