@@ -20,7 +20,7 @@ With Eclair, we created a proactive way for seniors to EASILY avoid their MEDICA
 * [Oshoke Maiki](https://github.com/omaiki) - oshokemaiki@gmail.com
 * [Kenneth Olson](https://github.com/kennetholson) - kenneth.ko.olson@gmail.com
 * [Sarah Sucha](https://github.com/sarahsucha) - sarahsucha@gmail.com
-* [Danijela Lazarevic] - dlazarevic071@gmail.com
+* Danijela Lazarevic - dlazarevic071@gmail.com
 
 ## Where We're At
 * >>> Make it work
