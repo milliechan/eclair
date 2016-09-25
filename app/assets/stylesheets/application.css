@@ -13,3 +13,603 @@
  *= require_tree .
  *= require_self
  */
+
+ /*-------------
+ 	General
+-------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font: normal 16px sans-serif;
+    color: #555;
+}
+
+ul, nav {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    /*opacity: 0.9;*/
+}
+
+a:hover {
+    opacity: 1;
+}
+
+a.btn {
+    color: #fff;
+    border-radius: 4px;
+    text-transform: uppercase;
+    background-color: #A9D3B1;
+    font-weight: 800;
+    text-align: center;
+}
+
+hr {
+    width: 150px;
+    height: 2px;
+    background-color: #2196F3;
+    border: 0;
+    margin-bottom: 80px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    /*align-items: center;*/
+    /*padding: 70px 100px 125px;*/
+}
+
+@media (max-width: 1000px) {
+    section {
+        padding: 100px 50px;
+    }
+}
+
+@media (max-width: 600px) {
+    section {
+        padding: 80px 30px;
+    }
+}
+
+section h3.title {
+    color: #42210B;
+    text-transform: capitalize;
+    font: bold 32px 'Open Sans', sans-serif;
+		margin-top: 20px;
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+section p {
+    max-width: 800px;
+    text-align: center;
+    margin-bottom: 35px;
+    padding: 0 20px;
+    line-height: 2;
+}
+
+ul.grid {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+/*-------------
+ 	Header
+-------------*/
+
+.logo {
+	width: 300px;
+	margin: 60px 0 0 75px;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+		padding: 0 20% 0 5%;
+    color: #fff;
+}
+
+header h2 {
+    font-family: 'Quicksand', sans-serif;
+}
+
+header nav {
+    display: flex;
+}
+
+header nav li {
+    margin: 0 15px;
+    text-align: center;
+}
+
+header nav li:first-child {
+    margin-left: 0;
+}
+
+header nav li:last-child {
+    margin-right: 0;
+}
+
+header nav li:hover {
+    color: #FF8FAC;
+}
+
+.user {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+@media (max-width: 1000px) {
+    header {
+        padding: 20px 50px;
+    }
+}
+
+@media (max-width: 890px) {
+	.logo {
+		width: 130px;
+		margin: 10px 0 0 75px;
+	}
+	section h3.title {
+		margin-top: 20px;
+	}
+}
+
+@media (max-width: 700px) {
+    header {
+        flex-direction: column;
+    }
+    header h2 {
+        margin-bottom: 15px;
+    }
+}
+
+h3 {
+    margin: 10px 0;
+}
+
+
+/*----------------
+ 	Home Section
+----------------*/
+.home-section {
+    position: relative;
+		align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    color: #fff;
+    text-align: center;
+}
+
+.home-section .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-color: #A9D3B1;
+    z-index: -1;
+}
+
+.home-section .background-image:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #BDEDBF;
+    opacity: 0.75;
+}
+
+.home-section h1 {
+    font: bold 60px 'Open Sans', sans-serif;
+    margin-bottom: 15px;
+}
+
+.home-section h3 {
+    font: normal 28px 'Open Sans', sans-serif;
+    margin-bottom: 40px;
+}
+
+.home-section a.btn {
+    padding: 20px 46px;
+}
+
+@media (max-width: 800px) {
+    .home-section {
+        min-height: 600px;
+    }
+    .home-section h1 {
+        font-size: 48px;
+    }
+    .home-section h3 {
+        font-size: 24px;
+    }
+    .home-section a.btn {
+        padding: 15px 40px;
+    }
+}
+
+/*----------------------
+ 	Doughnut Hole Definition Section
+----------------------*/
+
+.definition {
+		align-items: center;
+		padding: 70px 100px 125px;
+    background-color: #FFF7EA;
+}
+
+.definition .grid li {
+    padding: 0 30px;
+    flex-basis: 33%;
+    text-align: center;
+}
+
+.definition .grid li i {
+    font-size: 50px;
+    color: #2196F3;
+    margin-bottom: 25px;
+}
+
+.definition .grid li h4 {
+    color: #555;
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.definition .grid li p {
+    margin: 0;
+}
+
+.definition a.btn {
+	margin-top: 30px;
+	padding: 20px 46px;
+}
+
+@media (max-width: 1000px) {
+    .definition .grid li {
+        flex-basis: 70%;
+        margin-bottom: 65px;
+    }
+    .definition .grid li:last-child {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .definition .grid li {
+        flex-basis: 100%;
+    }
+}
+
+
+
+/*--------------------
+ 		Medical Profile
+---------------------*/
+
+.medical-profile {
+  width: 35%;
+	text-align: left;
+	align-items: left;
+	justify-content: left;
+
+}
+
+.medical-profile .grid li {
+    padding: 20px;
+    height: 350px;
+    border-radius: 3px;
+    background-clip: content-box;
+    background-size: cover;
+    background-position: center;
+    background-color: #333;
+}
+
+#insuranceSection {
+  background-color: #fff;
+	border-radius: 10px;
+	border: 2px solid #AFE086;
+	padding: 20px;
+	margin: 20px 0;
+}
+
+.medical-profile li {
+	list-style-type: none;
+}
+
+#medications {
+  background-color: #fff;
+	border-radius: 10px;
+	border: 2px solid #AFE086;
+	padding: 20px;
+	margin: 20px 0;
+}
+
+#medications li {
+    display: block;
+		color: #fff;
+    width: 100%;
+    line-height: 3;
+    text-decoration: none;
+		padding-left: 20px;
+    color: #fff;
+    background-color: #A9D3B1;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    margin-bottom: 5px;
+}
+
+/*TODO change this color*/
+#medications li.selected a {
+    background-color: #c22;
+}
+
+#medProfile {
+	align-items: center;
+	padding: 70px 100px 125px;
+  background-color: #FFF7EA;
+}
+
+#medProfile a.btn {
+	justify-content: center;
+	align-items: center;
+	width: 400px;
+	padding: 20px 46px;
+	margin-top: 30px;
+}
+
+.medical-profile .add {
+	align-items: right;
+	color: #AFE086;
+}
+
+@media (max-width: 1000px) {
+    .medical-profile .grid li.small, .medical-profile .grid li.large {
+        flex-basis: 100%;
+    }
+}
+
+
+/*----------------------
+ 	Yearly Cost Section
+----------------------*/
+
+
+.graph {
+    width: 500px;
+    display: block;
+}
+
+.yearly-cost a.btn {
+  display: block;
+}
+
+.yearly-cost {
+		align-items: center;
+		padding: 70px 100px 30px;
+    background-color: #FFF7EA;
+}
+
+.yearly-cost .grid li {
+    padding: 0 30px;
+    flex-basis: 33%;
+    text-align: center;
+}
+
+.yearly-cost .grid li i {
+    font-size: 50px;
+    color: #2196F3;
+    margin-bottom: 25px;
+}
+
+.yearly-cost .grid li h4 {
+    color: #555;
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.yearly-cost .grid li p {
+    margin: 0;
+}
+
+.yearly-cost a.btn {
+	margin-top: 30px;
+  margin-bottom: 30px;
+	padding: 20px 46px;
+}
+
+@media (max-width: 1000px) {
+    .yearly-cost .grid li {
+        flex-basis: 70%;
+        margin-bottom: 65px;
+    }
+    .yearly-cost .grid li:last-child {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .yearly-cost .grid li {
+        flex-basis: 100%;
+    }
+}
+
+
+/*--------------------
+ 	Drug Comparisons Section
+--------------------*/
+
+.drug-comparisons {
+    border-radius: 10px;
+  	border: 2px solid #AFE086;
+  	padding: 20px;
+  	margin: 20px 0;
+		align-items: center;
+		padding: 30px 100px 125px;
+    background-color: #fff;
+}
+
+.drug-comparisons .quote {
+    text-align: center;
+    width: 80%;
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    padding: 0;
+}
+
+.drug-comparisons .author {
+    font-size: 18px;
+    margin-bottom: 50px;
+}
+
+.drug-comparisons .author:last-child {
+    margin-bottom: 0;
+}
+
+.alternate-pill-list li {
+    display: block;
+		color: #fff;
+    width: 100%;
+    line-height: 3;
+    text-decoration: none;
+		padding-left: 20px;
+    color: #fff;
+    background-color: #A9D3B1;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    margin-bottom: 5px;
+}
+
+#compareDrugs a.btn {
+  margin-top: 30px;
+  align-items: center;
+}
+
+@media (max-width: 1000px) {
+    .drug-comparisons .quote {
+        font-size: 20px;
+    }
+    .drug-comparisons .author {
+        font-size: 16px;
+    }
+}
+
+/*-------------
+ 	Footer
+-------------*/
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+		padding: 70px 100px 125px;
+    color: #fff;
+    background-color: #42210B;
+    padding: 60px 0;
+}
+
+footer ul {
+    display: flex;
+    margin-bottom: 25px;
+    font-size: 32px;
+}
+
+footer ul li {
+    margin: 0 8px;
+}
+
+footer ul li:first-child {
+    margin-left: 0;
+}
+
+footer ul li:last-child {
+    margin-right: 0;
+}
+
+footer p {
+    text-transform: uppercase;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 10px;
+}
+
+footer p a {
+    color: #fff;
+}
+
+@media (max-width: 700px) {
+    footer {
+        padding: 80px 15px;
+    }
+}
+
+
+/* -- Demo ads -- */
+
+@media (max-width: 1200px) {
+    #bsaHolder {
+        display: none;
+    }
+}
+
+
+
+.ccsticky-nav {
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    background: #A9D3B1;
+}
+
+.ccsticky-nav ul {
+    padding: 20px;
+    margin: 0 auto;
+    list-style: none;
+    text-align: center;
+}
+
+.ccsticky-nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.ccsticky-nav ul li a {
+    padding: 10px 0;
+    color: #fff;
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+.ccsticky-nav ul li a:hover {
+    color: #BDEDBF;
+}

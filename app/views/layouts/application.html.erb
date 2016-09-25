@@ -1,14 +1,47 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>Eclair</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+    <%= stylesheet_link_tag "application"%>
+    <!--<link rel="stylesheet" href="assets/css/application.css">-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
   </head>
 
   <body>
+    <header class="ccsticky-nav">
+  		<h2><a href="/"><img class="logo" src=<%=image_path("logo.png")%> alt="eclair"></a></h2>
+  		<nav>
+  			<ul>
+          <li> <%= link_to 'Home', root_path %> </li>
+          <li> <%= link_to 'Yearly Cost', user_path(1) %> </li>
+          <li class="user"> <%= link_to 'Hi, Vivian!', user_medications_path(1) %> </li>
+        </ul>
+  		</nav>
+  	</header>
+
     <%= yield %>
+
+    <footer>
+      <p>Made in San Francisco</p>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <%= javascript_include_tag "application"%>
+    <!--<script src="app/assets/javascripts/channels/application.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
   </body>
 </html>
