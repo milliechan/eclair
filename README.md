@@ -25,7 +25,7 @@ With Eclair, we created a proactive way for seniors to EASILY avoid their MEDICA
 
 ## Where We're At
 * >>> Make it work
-* Graphically display alternatives to costly medications in order to avoid the doughnut hole
+* Graphically display medication alternatives that help avoid the doughnut hole
 * Educate the patient on healthy choices
 * Make it nice
 
