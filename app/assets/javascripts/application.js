@@ -23,22 +23,22 @@ $(document).ready(function() {
   function initializeCostEstimateGraph() {
     function getLabels() {
       return [
-          "January $20",
-          "February $20",
-          "March $20",
-          "April $20",
-          "May $20",
-          "June $20",
-          "July $20",
-          "August $500",
-          "September $500",
-          "October $500",
-          "November $20",
-          "December $20"
+          "$20 January",
+          "$20 February",
+          "$20 March",
+          "$20 April",
+          "$20 May",
+          "$20 June",
+          "$20 July",
+          "$500 August",
+          "$500 September",
+          "$500 October",
+          "$20 November",
+          "$20 December"
       ];
     }
     function getDatasetData() {
-      return [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
+      return [2016, 2016, 2016, 2016, 2016, 2016, 2016, 2016, 2016, 2016, 2016, 2016];
     }
     function getBackgroundColor() {
       return [
@@ -77,8 +77,9 @@ $(document).ready(function() {
       	onClick: function() {
           // alert('on click');
         },
+
         // responsiveAnimationDuration: 2000,
-        cutoutPercentage: 30
+        cutoutPercentage: 30,
       };
     }
     function getData() {
@@ -104,35 +105,34 @@ $(document).ready(function() {
     });
   }
 
-  initializeCostEstimateGraph();
+initializeCostEstimateGraph();
+ function loadGraphWhenInView() {
+   // init controller
+ var controller = new ScrollMagic.Controller();
 
-   function loadGraphWhenInView() {
-     // init controller
-	 var controller = new ScrollMagic.Controller();
-  
-	 // build scene
-	 var scene = new ScrollMagic.Scene({triggerElement: ".features", duration: 200, offset: 0})
-	 				.addTo(controller)
-           .setPin("#graph")
-	 				// .addIndicators() // add indicators (requires plugin)
-	 				.on("update", function (e) {
-	 					$("#scrollDirection").text(e.target.controller().info("scrollDirection"));
-	 				})
-	 				.on("enter leave", function (e) {
-             if (e.type == "enter") {
-               initializeCostEstimateGraph();
-             }
-	 					$("#state").text(e.type == "enter" ? "inside" : "outside");
-	 				})
-	 				.on("start end", function (e) {
-	 					$("#lastHit").text(e.type == "start" ? "top" : "bottom");
-	 				})
-	 				.on("progress", function (e) {
-	 					$("#progress").text(e.progress.toFixed(3));
-	 				});
-   }
-  
-   loadGraphWhenInView();
+ // build scene
+ var scene = new ScrollMagic.Scene({triggerElement: ".features", duration: 200, offset: 0})
+ 				.addTo(controller)
+         .setPin("#graph")
+ 				// .addIndicators() // add indicators (requires plugin)
+ 				.on("update", function (e) {
+ 					$("#scrollDirection").text(e.target.controller().info("scrollDirection"));
+ 				})
+ 				.on("enter leave", function (e) {
+           if (e.type == "enter") {
+             initializeCostEstimateGraph();
+           }
+ 					$("#state").text(e.type == "enter" ? "inside" : "outside");
+ 				})
+ 				.on("start end", function (e) {
+ 					$("#lastHit").text(e.type == "start" ? "top" : "bottom");
+ 				})
+ 				.on("progress", function (e) {
+ 					$("#progress").text(e.progress.toFixed(3));
+ 				});
+ }
+
+  loadGraphWhenInView();
 
 
 });
