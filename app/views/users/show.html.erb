@@ -1,0 +1,8 @@
+<h1>User show page</h1>
+<% if @user %>
+  <%= @user.name %>
+  <% @medications.each do |drug| %>
+    <%=  drug.name %>
+    <% end %>
+
+<% end %>
