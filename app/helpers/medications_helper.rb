@@ -4,17 +4,17 @@ require "uri"
 module MedicationsHelper
   def get_generics(original_drug)
 
-    # clientId = "1197"
-    # secret = "n1ndBzCNh+hW7kbVueswEsCGNiDd1yS6U4MKk3kOe14="
+    clientId = "1197"
+    secret = "n1ndBzCNh+hW7kbVueswEsCGNiDd1yS6U4MKk3kOe14="
     #
     # #Build up a uri that will pull the Title and How To Use sections
     # # of the patient education monograph for Digoxin (DispensableGeneric Id = 11)
-    # address = "https://api.fdbcloudconnector.com/CC/api/v1_3"
+    address = "https://api.fdbcloudconnector.com/CC/api/v1_3"
     #
-    # address = address + "/GenericDrugs?callSystemName=Dr. Sprenkle EHR&searchText=#{original_drug.name}&callid=1234&deptName=Patient e-Rx"
-    # uri = URI.parse(address)
-    # uri.query = [uri.query, "callsystemname=demo"].compact.join('?')
-    # uri.query = [uri.query, "sections=T,H"].compact.join('&')
+    address = address + "/GenericDrugs?callSystemName=Dr. Sprenkle EHR&searchText=#{original_drug.name}&callid=1234&deptName=Patient e-Rx"
+    uri = URI.parse(address)
+    uri.query = [uri.query, "callsystemname=demo"].compact.join('?')
+    uri.query = [uri.query, "sections=T,H"].compact.join('&')
      
     #add the headers required for authorization,
     # and to return the response in JSON format

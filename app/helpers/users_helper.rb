@@ -15,9 +15,12 @@ module UsersHelper
 		pd = PokitDok::PokitDok.new("RrslJ6itUf2akQHs1Zal", "NdHPmIQXiBGGTwRGYqh1qsKuDGVbgyQlqSzc4q5n")
 		user.medications.each do |medication|
 			test = pd.pharmacy_formulary(trading_partner_id: 'medicare_national', plan_number: user.insurance_plan_number, drug: medication.name.downcase)
+			p test['data'][0]
+			p '4'*80
 			$pokitdok_call << test['data'][0]
 		end
-		$pokitdok_call
+		p $pokitdok_call
+		p '8'*80
 	end
 
 	#grand total drug(what patient pays and insurance so the total rx cost)
@@ -87,12 +90,20 @@ module UsersHelper
 			#Patient pays no more than 45% of ⇒ plan’s cost for covered brand-name prescription drugs + pharmacy’s dispensing fee
 			if drug['tier'] == 1
 				$costs_toward_dh << drug['retail']['total_cost_30_day']['amount'].to_f * 0.58
-				$costs_toward_dh.inject(:+).round(2)
+				if $costs_toward_dh == 0
+					
+				else
+					$costs_toward_dh.inject(:+).round(2)
+				end
 
 			#patient pays 58% of cost, 58% of cost goes toward geting out of donut hole
 			elsif drug['tier'] == 2
 				$costs_toward_dh << drug['retail']['total_cost_30_day']['amount'].to_f * 0.45
-				$costs_toward_dh.inject(:+).round(2)
+				if $costs_toward_dh == 0
+					
+				else
+					$costs_toward_dh.inject(:+).round(2)
+				end
 
 			elsif drug['tier'] == 3
 				$costs_toward_dh << drug['retail']['total_cost_30_day']['amount'].to_f * 0.45

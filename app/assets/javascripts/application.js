@@ -33,7 +33,7 @@ $(document).ready(function() {
     })
 
     request.done(function(response) {
-
+      console.log(response + '888888888888888');
       function getLabels() {
         return [
           "$" + response.graph[1].cost + " January",
@@ -113,7 +113,7 @@ $(document).ready(function() {
 //  // build scene
  var scene = new ScrollMagic.Scene({triggerElement: ".features", duration: 200, offset: 0})
  				.addTo(controller)
-        .onLoad("#graph")
+        .setPin("#graph")
  				// .addIndicators() // add indicators (requires plugin)
  				.on("update", function (e) {
  					$("#scrollDirection").text(e.target.controller().info("scrollDirection"));
