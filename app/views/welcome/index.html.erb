@@ -1,7 +1,7 @@
 <section class="section home-section" id="home">
-  <div class="background-image" style="background-image: url(background.png);"></div>
+  <div class="background-image" style="background-image: url(<%=image_path("background.png")%>);"></div>
   <h1 class="animated fadeInRight">Newfashion Your Part D<br>and Fill the Doughnut Hole</h1>
-  <a href="#medProfile" class="btn">Enter Your Medications</a>
+  <%= link_to 'Enter Your Medications', user_medications_path(1), class:"btn" %>
 </section>
 
 <section class="section definition" id="PlanDDefinition">

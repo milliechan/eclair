@@ -22,12 +22,12 @@
 
   <body>
     <header class="ccsticky-nav">
-  		<h2><a href="#home"><img class="logo" src=<%=image_path("logo.png")%> alt="eclair"></a></h2>
+  		<h2><a href="/"><img class="logo" src=<%=image_path("logo.png")%> alt="eclair"></a></h2>
   		<nav>
   			<ul>
-          <li><a href="#home">Home</a></li>
-    			<li><a href="users/1">Yearly Cost</a></li>
-          <li class="user"><a href="users/1/medications">hi, Vivian!</a></li>
+          <li> <%= link_to 'Home', root_path %> </li>
+          <li> <%= link_to 'Yearly Cost', user_path(1) %> </li>
+          <li class="user"> <%= link_to 'Hi, Vivian!', user_medications_path(1) %> </li>
         </ul>
   		</nav>
   	</header>
