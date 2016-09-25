@@ -11,7 +11,7 @@ With Eclair, we created a proactive way for seniors to EASILY avoid their MEDICA
 
 ## Screenshots
 ![screenshots](/public/eclair-home.png "Home Page")
-![screenshots](/public/eclair-char.png "Part D Chart")
+![screenshots](/public/eclair-chart.png "Part D Chart")
 
 
 ## Team
