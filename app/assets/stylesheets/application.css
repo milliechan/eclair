@@ -81,7 +81,7 @@ section {
 }
 
 section h3.title {
-    color: #414a4f;
+    color: #42210B;
     text-transform: capitalize;
     font: bold 32px 'Open Sans', sans-serif;
 		margin-top: 20px;
@@ -359,12 +359,10 @@ h3 {
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
     border-radius: 3px;
-}
-
-#medications li {
     margin-bottom: 5px;
 }
 
+/*TODO change this color*/
 #medications li.selected a {
     background-color: #c22;
 }
@@ -399,9 +397,19 @@ h3 {
  	Yearly Cost Section
 ----------------------*/
 
+
+.graph {
+    width: 500px;
+    display: block;
+}
+
+.yearly-cost a.btn {
+  display: block;
+}
+
 .yearly-cost {
 		align-items: center;
-		padding: 70px 100px 125px;
+		padding: 70px 100px 30px;
     background-color: #FFF7EA;
 }
 
@@ -429,6 +437,7 @@ h3 {
 
 .yearly-cost a.btn {
 	margin-top: 30px;
+  margin-bottom: 30px;
 	padding: 20px 46px;
 }
 
@@ -454,8 +463,12 @@ h3 {
 --------------------*/
 
 .drug-comparisons {
+    border-radius: 10px;
+  	border: 2px solid #AFE086;
+  	padding: 20px;
+  	margin: 20px 0;
 		align-items: center;
-		padding: 70px 100px 125px;
+		padding: 30px 100px 125px;
     background-color: #fff;
 }
 
@@ -478,6 +491,26 @@ h3 {
     margin-bottom: 0;
 }
 
+.alternate-pill-list li {
+    display: block;
+		color: #fff;
+    width: 100%;
+    line-height: 3;
+    text-decoration: none;
+		padding-left: 20px;
+    color: #fff;
+    background-color: #A9D3B1;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    margin-bottom: 5px;
+}
+
+#compareDrugs a.btn {
+  margin-top: 30px;
+  align-items: center;
+}
+
 @media (max-width: 1000px) {
     .drug-comparisons .quote {
         font-size: 20px;
@@ -498,7 +531,7 @@ footer {
     text-align: center;
 		padding: 70px 100px 125px;
     color: #fff;
-    background-color: #414a4f;
+    background-color: #42210B;
     padding: 60px 0;
 }
 
@@ -546,9 +579,7 @@ footer p a {
     }
 }
 
-.graph {
-    width: 500px;
-}
+
 
 .ccsticky-nav {
     width: 100%;
