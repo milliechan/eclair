@@ -4,7 +4,8 @@
     <div id="insuranceSection">
       <h3>Your Insurance</h3>
       <!-- if user has already inputted insurance, appears here, if not, form appears -->
-      <h4>Name of Insurance Type</h4>
+      <h4>Medicare part D</h4>
+      <h5>Plan number: <%= @user.insurance_plan_number %></h5>
       <!-- Can look up according to Insurance plan #? -->
         <!-- <form id="insurance">
           <label><span>Your Insurance: </span><input name="insurance" type="text" placeholder="Insurance"/></label>
