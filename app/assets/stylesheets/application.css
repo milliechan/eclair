@@ -48,7 +48,7 @@ a.btn {
     color: #fff;
     border-radius: 4px;
     text-transform: uppercase;
-    background-color: #FF8E8E;
+    background-color: #A9D3B1;
     font-weight: 800;
     text-align: center;
 }
@@ -206,7 +206,7 @@ h3 {
     width: 100%;
     height: 100%;
     background-size: cover;
-    background-color: #FF8E8E;
+    background-color: #A9D3B1;
     z-index: -1;
 }
 
@@ -217,7 +217,7 @@ h3 {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #FFC3BC;
+    background-color: #BDEDBF;
     opacity: 0.75;
 }
 
@@ -351,7 +351,7 @@ h3 {
     text-decoration: none;
 		padding-left: 20px;
     color: #fff;
-    background-color: #FF8E8E;
+    background-color: #A9D3B1;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
     border-radius: 3px;
@@ -550,7 +550,7 @@ footer p a {
     height: 60px;
     position: fixed;
     top: 0;
-    background: #FF8E8E;
+    background: #A9D3B1;
 }
 
 .ccsticky-nav ul {
@@ -575,5 +575,5 @@ footer p a {
 }
 
 .ccsticky-nav ul li a:hover {
-    color: #FFC3BC;
+    color: #BDEDBF;
 }
