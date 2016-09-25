@@ -3,32 +3,31 @@
     <h3 class="title">Medical Profile</h3>
     <div id="insuranceSection">
       <h3>Your Insurance</h3>
-        <!-- if user has already inputted insurance, appears here, if not, form appears -->
-        <h4>Name of Insurance Type</h4>
-        <!-- Can look up according to Insurance plan #? -->
+      <!-- if user has already inputted insurance, appears here, if not, form appears -->
+      <h4>Name of Insurance Type</h4>
+      <!-- Can look up according to Insurance plan #? -->
         <!-- <form id="insurance">
           <label><span>Your Insurance: </span><input name="insurance" type="text" placeholder="Insurance"/></label>
           <input type="submit" value="Save">
         </form> -->
-    </div>
-    <div id="medications">
-      <h3>Your Medications</h3>
+      </div>
+      <div id="medications">
+        <h3>Your Medications</h3>
         <ol class="custom-bullet pill-list">
-          <li><a href="medicine/id">Medicine 1</a></li>
-          <li><a href="medicine/id">Medicine 2</a></li>
-          <li><a href="medicine/id">Medicine 3</a></li>
-          <li><a href="medicine/id">Medicine 2</a></li>
+        <% @medications.each do |med| %>
+          <li><a href="medicine/id"><%= med.name %></a></li>
+          <% end %>
         </ol>
         <a href="#"><i class="add fa fa-plus-circle fa-3x" aria-hidden="true"></i></a>
         <!-- when user goes over the fa plus circle, rotates 90 (class fa-rotate-90) and changes color -->
+      </div>
+      <div id="enterMeds">
+        <h3>Add a Medicine</h3>
+        <form id="medications" name="medications">
+          <label><span>Prescription Name: </span><input/></label>
+          <input type="submit" value="Add">
+        </form>
+      </div>
     </div>
-    <div id="enterMeds">
-      <h3>Add a Medicine</h3>
-      <form id="medications" name="medications">
-        <label><span>Prescription Name: </span><input/></label>
-        <input type="submit" value="Add">
-      </form>
-    </div>
-  </div>
-  <%= link_to 'Enter Your Medications', user_path(1), class:"btn" %>
-</section>
+    <%= link_to 'Enter Your Medications', user_path(1), class:"btn" %>
+  </section>
