@@ -9,7 +9,6 @@
 drug_list = [ 
               "zometa",
               "singulair",
-              "namenda",
               "simvastatin",
               "metformin",
               "alendronate",
@@ -17,7 +16,7 @@ drug_list = [
               "levothyroxine",
               "sertraline",
               "hydrochlorothiazide",
-              "metoprolol",
+              "metoprolol"
             ]
 
 
