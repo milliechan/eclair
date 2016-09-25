@@ -7,6 +7,7 @@ In 24 hours, develop an easy-to-use tool to help seniors better understand and e
 
 With Eclair, we created a proactive way for seniors to EASILY avoid their MEDICARE PART D coverage gap!
 
+[Click here](https://blog.pokitdok.com/donut-hole-medicare-drug-coverage-explained/) for more information on the "doughnut hole".
 
 
 ## Screenshots
@@ -24,6 +25,8 @@ With Eclair, we created a proactive way for seniors to EASILY avoid their MEDICA
 
 ## Where We're At
 * >>> Make it work
+* Graphically display alternatives to costly medications in order to avoid the doughnut hole
+* Educate the patient on healthy choices
 * Make it nice
 
 ## Goals
