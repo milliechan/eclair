@@ -6,6 +6,19 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+drug_list = [
+              "Lisinopril",
+              "Simvastatin",
+              "Metformin",
+              "alendronate",
+              "Tamsulosin" ,
+              "Levothyroxine",
+              "Sertraline",
+              "Hydrochlorothiazide",
+              "Metoprolol",
+              "Isosorbide mononitrate"
+            ]
+
 
 User.create(
   name: 'tom',
@@ -20,11 +33,17 @@ User.create(
   months_after_gap: 4
   )
 
-Medication.create(
-  name: 'simvastatin'
-  )
+drug_list.each do |drug|
+  Medication.create(
+    name: drug)
+end
 
-UserMedication.create(
-  user_id: 1,
-  medication_id: 1
-  )
+
+medications = Medication.all 
+medications.each do |medication|
+  UserMedication.create(
+    user_id: 1,
+    medication_id: medication.id)
+end 
+
+
