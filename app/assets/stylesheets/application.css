@@ -631,10 +631,15 @@ footer p a {
 .ccsticky-nav ul li a {
     padding: 10px 0;
     color: #fff;
-    font-size: 24px;
+    font-size: 20px;
     text-decoration: none;
     font-weight: bold;
     transition: all 0.2s ease;
+}
+
+.ccsticky-nav .user a {
+    font-size: 24px;
+    font-weight: bold;
 }
 
 .ccsticky-nav ul li a:hover {

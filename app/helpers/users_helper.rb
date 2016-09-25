@@ -25,7 +25,7 @@ module UsersHelper
 		$pokitdok_call.each do |drug|
 		$total_cost << drug['retail']['total_cost_30_day']['amount'].to_f
 		end
-		
+
 		sum_total_cost = $total_cost.inject(:+)
 	end
 
@@ -38,7 +38,7 @@ module UsersHelper
 		i = 1
 		while i <= 12
 			if  get_grand_total_one_month * i >= 3310
-				return i 
+				return i
 				break
 			end
 			i += 1
@@ -61,13 +61,13 @@ module UsersHelper
 	def patient_monthly_costs_during_dh
 		$pt_costs_monthy_during_dh = []
 
-		$pokitdok_call.each do |drug|	
+		$pokitdok_call.each do |drug|
 			#Patient pays no more than 45% of ⇒ plan’s cost for covered brand-name prescription drugs + pharmacy’s dispensing fee
 			if drug['tier'] == 1
 				$pt_costs_monthy_during_dh << (drug['retail']['total_cost_30_day']['amount'].to_f * 0.58)
 
-			#patient pays 58% of cost, 58% of cost goes toward geting out of donut hole			
-			elsif drug['tier'] == 2 
+			#patient pays 58% of cost, 58% of cost goes toward geting out of donut hole
+			elsif drug['tier'] == 2
 				$pt_costs_monthy_during_dh << (drug['retail']['total_cost_30_day']['amount'].to_f * 0.45)
 			elsif drug['tier'] == 3
 				$pt_costs_monthy_during_dh << (drug['retail']['total_cost_30_day']['amount'].to_f * 0.45)
@@ -83,13 +83,13 @@ module UsersHelper
 	def monthly_costs_toward_getting_out_dh
 		$costs_toward_dh = []
 
-		$pokitdok_call.each do |drug|	
+		$pokitdok_call.each do |drug|
 			#Patient pays no more than 45% of ⇒ plan’s cost for covered brand-name prescription drugs + pharmacy’s dispensing fee
 			if drug['tier'] == 1
 				$costs_toward_dh << drug['retail']['total_cost_30_day']['amount'].to_f * 0.58
 				$costs_toward_dh.inject(:+).round(2)
 
-			#patient pays 58% of cost, 58% of cost goes toward geting out of donut hole			
+			#patient pays 58% of cost, 58% of cost goes toward geting out of donut hole
 			elsif drug['tier'] == 2
 				$costs_toward_dh << drug['retail']['total_cost_30_day']['amount'].to_f * 0.45
 				$costs_toward_dh.inject(:+).round(2)
@@ -108,7 +108,7 @@ module UsersHelper
 	def months_in_dh
 		i = 1
 		while i <= 12
-			if monthly_costs_toward_getting_out_dh * i >= 1540
+			if monthly_costs_toward_getting_out_dh * i >= 4850
 				return i
 				break
 			end
@@ -120,16 +120,16 @@ module UsersHelper
 	def patient_monthly_costs_after_dh
 		$pt_costs_monthy_after_dh = []
 
-		$pokitdok_call.each do |drug|	
+		$pokitdok_call.each do |drug|
 			#Patient pays no more than 45% of ⇒ plan’s cost for covered brand-name prescription drugs + pharmacy’s dispensing fee
 			if drug['tier'] == 1
 				$pt_costs_monthy_after_dh << 2.65
 
-			#patient pays 58% of cost, 58% of cost goes toward geting out of donut hole			
+			#patient pays 58% of cost, 58% of cost goes toward geting out of donut hole
 			elsif drug['tier'] == 2
-				$pt_costs_monthy_after_dh << 2.65	
+				$pt_costs_monthy_after_dh << 2.65
 			elsif drug['tier'] == 3
-				$pt_costs_monthy_after_dh << 2.65	
+				$pt_costs_monthy_after_dh << 2.65
 			else
 				$pt_costs_monthy_during_dh << 6.60
 			end
@@ -155,7 +155,7 @@ module UsersHelper
 			end
 		else
 			12.times do |i|
-			output_hash[i + 1] = { cost: patient_monthly_costs_before_dh,in_dh: false}			
+			output_hash[i + 1] = { cost: patient_monthly_costs_before_dh,in_dh: false}
 			end
 		end
 		output_hash
