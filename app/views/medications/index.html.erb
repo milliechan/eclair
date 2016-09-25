@@ -14,7 +14,7 @@
       <div id="medications">
         <h3>Your Medications</h3>
         <ol class="custom-bullet pill-list">
-        <% @medications.each do |med| %>
+          <% @medications.each do |med| %>
           <li><a href="medicine/id"><%= med.name %></a></li>
           <% end %>
         </ol>
@@ -23,10 +23,12 @@
       </div>
       <div id="enterMeds">
         <h3>Add a Medicine</h3>
-        <form id="medications" name="medications">
-          <label><span>Prescription Name: </span><input/></label>
-          <input type="submit" value="Add">
+        
+        <form id="medications" name="medications" action='medications' method="post">
+        Name of Medication: <input type="text" name="name">
+          <!--<label><span>Prescription Name: </span><input/></label>   -->       <input type="submit" value="Add">
         </form>
+
       </div>
     </div>
     <%= link_to 'Enter Your Medications', user_path(1), class:"btn" %>
