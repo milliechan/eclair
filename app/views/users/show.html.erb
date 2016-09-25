@@ -1,6 +1,15 @@
 <h1>User show page</h1>
 <% if @user %>
   <%= @user.name %>
+  <%= @user.insurance_plan_number %>
+  <%=  @user.insurance_type %>
+  <%=  @user.insurance_name  %>
+  <%=  @user.cost_per_month_before_gap %>
+  <%= @user.cost_per_month_during_gap  %>
+  <%= @user.cost_per_month_after_gap  %>
+  <%= @user.months_before_gap  %>
+  <%= @user.months_during_gap  %>
+  <%= @user.months_after_gap  %>
   <% @medications.each do |drug| %>
     <%=  drug.name %>
     <% end %>
