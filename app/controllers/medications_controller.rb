@@ -19,6 +19,21 @@ class MedicationsController < ApplicationController
   end
 
   def edit
+    # @user = User.first 
+    # if request.xhr? 
+    #   new_list = []
+    #   @user.medications.each do |drug| 
+    #     if drug.brand_name 
+    #       generic_drug = FDB.searchgenericdrugs("urlsearchtext=#{drug.name}")
+    #       new_list << generic_drug
+    #     else 
+    #       new_list << drug 
+    #     end 
+    #   end
+    #   calculator(new_list)
+    # else 
+    #   do_something_else?
+    # end
   end
 
   def update 
