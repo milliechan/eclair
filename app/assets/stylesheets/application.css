@@ -25,7 +25,8 @@
 }
 
 html {
-    font: normal 16px sans-serif;
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
     color: #555;
 }
 
@@ -48,9 +49,19 @@ a.btn {
     color: #fff;
     border-radius: 4px;
     text-transform: uppercase;
-    background-color: #A9D3B1;
+    background-color: #AFE086;
     font-weight: 800;
     text-align: center;
+}
+
+.formField {
+    height: 25px;
+    border-radius: 4px;
+    border-style: solid 1px;
+}
+
+.formSubmit {
+  font-size: 16px;
 }
 
 hr {
@@ -83,7 +94,7 @@ section {
 section h3.title {
     color: #42210B;
     text-transform: capitalize;
-    font: bold 32px 'Open Sans', sans-serif;
+    font: bold 32px 'Roboto Slab', serif;
 		margin-top: 20px;
     margin-bottom: 35px;
     text-align: center;
@@ -184,6 +195,8 @@ header nav li:hover {
 
 h3 {
     margin: 10px 0;
+    font-size: 24px;
+    font-family: 'Roboto Slab', serif;
 }
 
 
@@ -222,12 +235,12 @@ h3 {
 }
 
 .home-section h1 {
-    font: bold 60px 'Open Sans', sans-serif;
+    font: bold 60px 'Roboto Slab', serif;
     margin-bottom: 15px;
 }
 
 .home-section h3 {
-    font: normal 28px 'Open Sans', sans-serif;
+    font: normal 28px 'Lato', sans-serif;
     margin-bottom: 40px;
 }
 
@@ -310,7 +323,7 @@ h3 {
 ---------------------*/
 
 .medical-profile {
-  width: 35%;
+  width: 40%;
 	text-align: left;
 	align-items: left;
 	justify-content: left;
@@ -345,6 +358,7 @@ h3 {
 	border: 2px solid #AFE086;
 	padding: 20px;
 	margin: 20px 0;
+  margin-bottom: 40px;
 }
 
 #medications li {
@@ -355,11 +369,13 @@ h3 {
     text-decoration: none;
 		padding-left: 20px;
     color: #fff;
-    background-color: #A9D3B1;
+    background-color: #91BA98;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
     border-radius: 3px;
     margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 /*TODO change this color*/
@@ -389,6 +405,9 @@ h3 {
 @media (max-width: 1000px) {
     .medical-profile .grid li.small, .medical-profile .grid li.large {
         flex-basis: 100%;
+    }
+    .medical-profile {
+      width: 70%;
     }
 }
 
@@ -499,7 +518,7 @@ h3 {
     text-decoration: none;
 		padding-left: 20px;
     color: #fff;
-    background-color: #A9D3B1;
+    background-color: #91BA98;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
     border-radius: 3px;
@@ -604,7 +623,7 @@ footer p a {
 .ccsticky-nav ul li a {
     padding: 10px 0;
     color: #fff;
-    font-size: 1rem;
+    font-size: 24px;
     text-decoration: none;
     font-weight: bold;
     transition: all 0.2s ease;
