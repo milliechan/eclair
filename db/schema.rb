@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 20160925001441) do
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
-    t.integer  "insurance_plan_number"
+    t.string   "insurance_plan_number"
     t.string   "insurance_type"
     t.string   "insurance_name"
     t.integer  "cost_per_month_before_gap"

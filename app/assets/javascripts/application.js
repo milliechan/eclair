@@ -19,13 +19,13 @@ $(document).ready(function() {
 
   $('#enterMeds').hide();
   listenForAddMedicine();
-  // listenForShowDonutButton();
+  listenForUpdateChart();
 
   function initializeCostEstimateGraph() {
 
-        var address = window.location.href
+    var address = window.location.href
     var split_address = address.split('/');
-    var event_id = split_address[split_address.length - 2];
+    var event_id = split_address[split_address.length - 1];
 
     var request = $.ajax({
       url: "/users/"+event_id+"/donut",
@@ -53,37 +53,22 @@ $(document).ready(function() {
       function getDatasetData() {
         return [2016, 2016, 2016, 2016, 2016, 2016, 2016, 2016, 2016, 2016, 2016, 2016];
       }
+      var colorArray = []
+      for (var i = 1; i < 13; i++) {
+        if (response.graph[i].in_dh == true){
+          colorArray.push("#FF8E8E")
+        }
+        else {
+          colorArray.push("#AFE086")
+        }
+      }
+      console.log(colorArray)
       function getBackgroundColor() {
-        return [
-            "#AFE086",
-            "#AFE086",
-            "#AFE086",
-            "#AFE086",
-            "#AFE086",
-            "#AFE086",
-            "#AFE086",
-            "#FF8E8E",
-            "#FF8E8E",
-            "#FF8E8E",
-            "#AFE086",
-            "#AFE086"
-        ];
+      console.log(colorArray)     
+        return colorArray;
       }
       function getHoverBackgroundColor() {
-        return [
-            "#C6F0A3",
-            "#C6F0A3",
-            "#C6F0A3",
-            "#C6F0A3",
-            "#C6F0A3",
-            "#C6F0A3",
-            "#C6F0A3",
-            "#FFC3BC",
-            "#FFC3BC",
-            "#FFC3BC",
-            "#C6F0A3",
-            "#C6F0A3"
-        ];
+        return colorArray;
       }
       function getOptions() {
         return {
@@ -149,15 +134,6 @@ $(document).ready(function() {
 
   loadGraphWhenInView();
 
-var redirectToGraph = function() {
-  // var address = window.location.href
-  // var split_address = address.split('/');
-  // var event_id = split_address[split_address.length - 2];
-  // window.location = "/users/"+event_id
-  window.location = 'www.google.com'
-}
-
-
 });
 
  var listenForAddMedicine = function() {
@@ -167,99 +143,8 @@ var redirectToGraph = function() {
    });
  };
 
- // var listenForShowDonutButton = function() {
- //  $('.show_donut_button').on('click', function(event) {
- //    event.preventDefault();
-
- //    var address = window.location.href
- //    var split_address = address.split('/');
- //    var event_id = split_address[split_address.length - 2];
-
- //    var request = $.ajax({
- //      url: "/users/"+event_id+"/donut",
- //      type: 'get'
- //    })
-
- //    request.done(function(response) {
- //      console.log("Request successful");
- //      console.log(response);
- //      var obj = response;
- //      var labels = [
- //              "$" + obj.graph[1].cost + " January",
- //              "$" + obj.graph[2].cost + " February",
- //              "$" + obj.graph[3].cost + " March",
- //              "$" + obj.graph[4].cost + " April",
- //              "$" + obj.graph[5].cost + " May",
- //              "$" + obj.graph[6].cost + " June",
- //              "$" + obj.graph[7].cost + " July",
- //              "$" + obj.graph[8].cost + " August",
- //              "$" + obj.graph[9].cost + " September",
- //              "$" + obj.graph[10].cost + " October",
- //              "$" + obj.graph[11].cost + " November",
- //              "$" + obj.graph[12].cost + " December"
- //              ];
- //      var data = {
- //        datasets: [{
- //            data: [2016, 2016, 2016, 2016, 2016, 2016, 2016, 2016, 2016, 2016, 2016, 2016],
- //            backgroundColor: [
- //              "#AFE086",
- //              "#AFE086",
- //              "#AFE086",
- //              "#AFE086",
- //              "#AFE086",
- //              "#AFE086",
- //              "#AFE086",
- //              "#FF8E8E",
- //              "#FF8E8E",
- //              "#FF8E8E",
- //              "#AFE086",
- //              "#AFE086"
- //            ]
- //        }]
- //      };
-
-
- //      function Redirect(data) {
- //        window.location.href = "/users/"+event_id;
- //        function loadGraphWhenInView(data)
- //        function getGraphElement() {
- //          return document.getElementById("costEstimateGraph");
- //        }
- //        function getOptions() {
- //          return {
- //           onClick: function() {
- //              // alert('on click');
- //            },
-
- //            // responsiveAnimationDuration: 2000,
- //            cutoutPercentage: 30,
- //          };
- //        }
-
- //        new Chart(getGraphElement(), {
- //            type: 'pie',
- //            labels: labels,
- //            data: data,
- //            options: getOptions()
- //        });
- //      }
-
- //      Redirect(data);
-
- //      // debugger;
- //      // var context = document.getElementById('costEstimateGraph');
-
-     
-
-
-
- //      // window.location = 'www.google.com'
- //      // redirectToGraph(); 
- //      // console.log(obj.graph[1].cost)
- //    })
-
- //  })
- // }
-
-
-
+var listenForUpdateChart = function() {
+  $('#getGenericDrugsButton').on('click', function() {
+    event.preventDefault();
+  })
+}
