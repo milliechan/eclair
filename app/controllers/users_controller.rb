@@ -5,23 +5,24 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @medications = @user.medications
-
+    
     # if request.xhr?
       new_list = []
-      @medications.each do |drug| 
-      # if drug.brand_name 
-        data = get_generics(drug)
-        parsed_data = JSON.parse(data)
-        generic_drug = parsed_data["Items"][0]["GenericDrugDesc"]
-        new_list << generic_drug
-        p "*" * 1000
-        p new_list
-      # else 
-      #   new_list << drug 
-      # end 
+      @medications.each_with_index do |drug, index| 
+        # p is_brand_name?(drug)
+        # if is_brand_name?(drug)
+        if index < 4
+          data = get_generics(drug)
+          parsed_data = JSON.parse(data)
+          generic_drug = parsed_data["Items"][0]["GenericDrugDesc"]
+          new_list << generic_drug
+        else 
+          new_list << drug.name
+        end 
       end
     # end 
-    
+    p "*" *50
+    p new_list
     render :show
   end
 
