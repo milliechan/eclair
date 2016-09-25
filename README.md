@@ -1,5 +1,7 @@
 #Eclair - *Health 2.0* Hackathon 2016
 
+eclair.herokuapp.com
+
 ## Purpose
 In 24 hours, develop an easy-to-use tool to help seniors better understand and engage with their health care costs.
 
