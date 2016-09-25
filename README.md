@@ -10,7 +10,8 @@ With Eclair, we created a proactive way for seniors to EASILY avoid their MEDICA
 
 
 ## Screenshots
-![screenshots](/public/screenshots.jpg "screenshots")
+![screenshots](/public/screenshots.jpg "eclair-char.png")
+![screenshots](/public/screenshots.jpg "eclair-home.png")
 
 ## Team
 * [Armon Arcuri](https://github.com/armoney) - armonsf@gmail.com
